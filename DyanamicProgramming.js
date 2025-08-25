@@ -1,4 +1,4 @@
-// DynamicProgramming.js
+
 
 function selectBestSequence(sequences, probs) {
     if (sequences.length === 0) return { sequence: [], probability: 0 };
@@ -10,9 +10,9 @@ function selectBestSequence(sequences, probs) {
         let seqProb = 1;
         for (let j = 0; j < sequences[i].length; j++) {
             if (probs[i] && probs[i][j] != null) {
-                seqProb *= probs[i][j]; // multiply token probabilities
+                seqProb *= probs[i][j]; 
             } else {
-                seqProb *= 1; // default if missing
+                seqProb *= 1; 
             }
         }
         if (seqProb > bestProb) {
